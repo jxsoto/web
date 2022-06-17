@@ -1,0 +1,25 @@
+<ul ngbNav #nav="ngbNav" class="nav-tabs">
+    <li ngbNavItem>
+      <a ngbNavLink>inicio</a>
+    </li>
+    <li ngbNavItem>
+      <a ngbNavLink>productos</a>
+      <ng-template ngbNavContent>
+        <p></p>  
+        <p [routerLink]="['/productos','nombre']">producto</p></ng-template>
+    </li>
+    <li ngbNavItem>
+        <a ngbNavLink>foro</a>
+        <ng-template ngbNavContent>
+            <p></p>
+            <app-foro></app-foro>
+            </ng-template>
+      </li>
+      <li ngbNavItem>
+        <a ngbNavLink>noticia</a>
+        <ng-template ngbNavContent>
+            <p></p>
+            <p [routerLink]="['/noticia','1']">publicacion noticia</p></ng-template>
+      </li>
+  </ul>
+  <div [ngbNavOutlet]="nav"></div>

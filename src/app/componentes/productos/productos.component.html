@@ -1,0 +1,15 @@
+<input 
+    #inputSearch
+    autofocus
+    type="text"
+    class="form-control-lg"
+    placeholder="buscar"
+    (keyup)="buscarProductos(inputSearch.value)"
+  />
+
+
+<h1>{{cartas|json}}</h1>
+
+
+
+<p [routerLink]="['/carrito','nombreañadido']">añadir carrito</p>
